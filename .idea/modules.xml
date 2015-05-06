@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ClassGradeChecker.iml" filepath="$PROJECT_DIR$/ClassGradeChecker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Class_Grade_Checker.iml" filepath="$PROJECT_DIR$/Class_Grade_Checker.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>
+
