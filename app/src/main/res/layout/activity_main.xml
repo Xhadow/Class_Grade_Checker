@@ -7,7 +7,7 @@
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
+        android:layout_height="225dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:paddingTop="5dp"
@@ -20,10 +20,10 @@
 
         <TableLayout
             android:layout_width="fill_parent"
-            android:layout_height="250dp"
+            android:layout_height="225dp"
             android:orientation="vertical"
             android:layoutMode="opticalBounds"
-            android:padding="5dp"
+            android:padding="0dp"
             android:textAlignment="center"
             android:stretchColumns="1,3">
             <TableRow>
@@ -33,7 +33,7 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="Your\nPercentage"
                     android:id="@+id/textView"
-                    android:textAlignment="center" />
+                    android:gravity="center" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
                     android:text="Percentage\nin Class"
                     android:layout_column="4"
                     android:id="@+id/textView2"
-                    android:textAlignment="center" />
+                    android:gravity="center" />
 
             </TableRow>
 
@@ -54,7 +54,8 @@
                     android:ems="3"
                     android:id="@+id/editText"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -63,7 +64,7 @@
                     android:text=" Out of "
                     android:layout_column="2"
                     android:id="@+id/textView3"
-                    android:textAlignment="center" />
+                    android:gravity="center" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -73,7 +74,8 @@
                     android:layout_column="4"
                     android:id="@+id/editText2"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
             </TableRow>
 
             <TableRow>
@@ -84,7 +86,8 @@
                     android:ems="3"
                     android:id="@+id/editText3"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,7 +96,7 @@
                     android:text=" Out of "
                     android:layout_column="2"
                     android:id="@+id/textView4"
-                    android:textAlignment="center" />
+                    android:gravity="center" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -103,7 +106,8 @@
                     android:layout_column="4"
                     android:id="@+id/editText4"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
             </TableRow>
 
             <TableRow>
@@ -114,7 +118,8 @@
                     android:ems="3"
                     android:id="@+id/editText5"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -123,7 +128,7 @@
                     android:text=" Out of "
                     android:layout_column="2"
                     android:id="@+id/textView5"
-                    android:textAlignment="center" />
+                    android:gravity="center" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -133,7 +138,8 @@
                     android:layout_column="4"
                     android:id="@+id/editText6"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
             </TableRow>
 
             <TableRow>
@@ -144,7 +150,8 @@
                     android:ems="3"
                     android:id="@+id/editText7"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -153,7 +160,7 @@
                     android:text=" Out of "
                     android:layout_column="2"
                     android:id="@+id/textView6"
-                    android:textAlignment="center" />
+                    android:gravity="center" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -163,7 +170,8 @@
                     android:layout_column="4"
                     android:id="@+id/editText8"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
             </TableRow>
 
             <TableRow>
@@ -174,7 +182,8 @@
                     android:ems="3"
                     android:id="@+id/editText9"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -193,7 +202,8 @@
                     android:layout_column="4"
                     android:id="@+id/editText10"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
             </TableRow>
 
             <TableRow>
@@ -204,7 +214,8 @@
                     android:ems="3"
                     android:id="@+id/editText11"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -223,7 +234,8 @@
                     android:layout_column="4"
                     android:id="@+id/editText12"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
             </TableRow>
 
             <TableRow>
@@ -234,7 +246,8 @@
                     android:ems="3"
                     android:id="@+id/editText13"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -253,7 +266,8 @@
                     android:layout_column="4"
                     android:id="@+id/editText14"
                     android:layout_marginTop="0dp"
-                    android:textAlignment="center" />
+                    android:gravity="center"
+                    android:text="0"/>
             </TableRow>
         </TableLayout>
     </ScrollView>
@@ -261,28 +275,29 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Calculate"
+        android:onClick="clickButton"
         android:id="@+id/button"
         android:layout_below="@+id/scrollView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="Grade Needed for an A:"
         android:id="@+id/textView10"
         android:layout_below="@+id/button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="Grade Needed for a B: "
         android:id="@+id/textView11"
         android:layout_below="@+id/textView10"
         android:layout_alignParentLeft="true"
@@ -292,11 +307,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="Grade Needed for a C: "
         android:id="@+id/textView12"
         android:layout_below="@+id/textView11"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView13"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView14"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView15"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView16"
+        android:layout_alignTop="@+id/textView12"
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10" />
 
 
 </RelativeLayout>
