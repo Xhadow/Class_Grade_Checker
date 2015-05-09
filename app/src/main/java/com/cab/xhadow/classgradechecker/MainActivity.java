@@ -32,54 +32,66 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void clickButton(View v) {
+        int[] Cperc_int = new int[7];
+        int[] perc_int = new int[7];
+        EditText[] Cperc = new EditText[7];
+        EditText[] perc = new EditText[7];
         //Get the inputs for the class percentages
-        EditText first_CPerc = (EditText) findViewById(R.id.editText2);
-        EditText sec_CPerc = (EditText) findViewById(R.id.editText4);
-        EditText third_CPerc = (EditText) findViewById(R.id.editText6);
-        EditText four_CPerc = (EditText) findViewById(R.id.editText8);
-        EditText fif_CPerc = (EditText) findViewById(R.id.editText10);
-        EditText six_CPerc = (EditText) findViewById(R.id.editText12);
-        EditText sev_CPerc = (EditText) findViewById(R.id.editText14);
-        int first_Cperc_int = Integer.parseInt(first_CPerc.getText().toString());
-        int sec_Cperc_int = Integer.parseInt(sec_CPerc.getText().toString());
-        int third_Cperc_int = Integer.parseInt(third_CPerc.getText().toString());
-        int four_Cperc_int = Integer.parseInt(four_CPerc.getText().toString());
-        int fif_Cperc_int = Integer.parseInt(fif_CPerc.getText().toString());
-        int six_Cperc_int = Integer.parseInt(six_CPerc.getText().toString());
-        int sev_Cperc_int = Integer.parseInt(sev_CPerc.getText().toString());
-        if(!(checkPercent(first_Cperc_int, sec_Cperc_int, third_Cperc_int, four_Cperc_int, fif_Cperc_int,
-                six_Cperc_int, sev_Cperc_int))) {
+        Cperc[0] = (EditText) findViewById(R.id.editText2);
+        Cperc[1] = (EditText) findViewById(R.id.editText4);
+        Cperc[2] = (EditText) findViewById(R.id.editText6);
+        Cperc[3] = (EditText) findViewById(R.id.editText8);
+        Cperc[4] = (EditText) findViewById(R.id.editText10);
+        Cperc[5] = (EditText) findViewById(R.id.editText12);
+        Cperc[6] = (EditText) findViewById(R.id.editText14);
+        for(int i = 0; i < Cperc.length; i++) {
+            Cperc_int[i] = Integer.parseInt(Cperc[i].getText().toString());
+        }
+        if(!(checkPercent(Cperc_int))) {
             TextView errt = (TextView) findViewById(R.id.textView13);
             errt.setText("Error: Percentage in class is over 100");
         } else {
             //Get the inputs for their percentages
-            EditText first_Perc = (EditText) findViewById(R.id.editText);
-            EditText sec_Perc = (EditText) findViewById(R.id.editText3);
-            EditText third_Perc = (EditText) findViewById(R.id.editText5);
-            EditText four_Perc = (EditText) findViewById(R.id.editText7);
-            EditText fif_Perc = (EditText) findViewById(R.id.editText9);
-            EditText six_Perc = (EditText) findViewById(R.id.editText11);
-            EditText sev_Perc = (EditText) findViewById(R.id.editText13);
-            int first_perc_int = Integer.parseInt(first_Perc.getText().toString());
-            int sec_perc_int = Integer.parseInt(sec_Perc.getText().toString());
-            int third_perc_int = Integer.parseInt(third_Perc.getText().toString());
-            int four_perc_int = Integer.parseInt(four_Perc.getText().toString());
-            int fif_perc_int = Integer.parseInt(fif_Perc.getText().toString());
-            int six_perc_int = Integer.parseInt(six_Perc.getText().toString());
-            int sev_perc_int = Integer.parseInt(sev_Perc.getText().toString());
+            TextView errt = (TextView) findViewById(R.id.textView13);
+            errt.setText("");
+            perc[0] = (EditText) findViewById(R.id.editText);
+            perc[1] = (EditText) findViewById(R.id.editText3);
+            perc[2] = (EditText) findViewById(R.id.editText5);
+            perc[3] = (EditText) findViewById(R.id.editText7);
+            perc[4] = (EditText) findViewById(R.id.editText9);
+            perc[5] = (EditText) findViewById(R.id.editText11);
+            perc[6] = (EditText) findViewById(R.id.editText13);
+            for(int i = 0; i < perc.length; i++) {
+                perc_int[i] = Integer.parseInt(perc[i].getText().toString());
+            }
+
+            calcGrade(perc_int, Cperc_int);
         }
     }
 
-    private boolean checkPercent(int perc1, int perc2, int perc3, int perc4, int perc5, int perc6, int perc7) {
+    private boolean checkPercent(int[] perc) {
         boolean perc_ret;
-        int perc_check;
-        perc_check = perc1 + perc2 + perc3 + perc4 + perc5 + perc6 + perc7;
+        int perc_check = 0;
+        for(int i = 0; i < perc.length; i++)
+        {
+            perc_check += perc[i];
+        }
         if (perc_check > 100) {
             perc_ret = false;
         } else {
             perc_ret = true;
         }
         return perc_ret;
+    }
+
+    private int calcGrade(int[] percPer, int[] percClass) {
+        int calcGraded;
+        return calcGraded;
+    }
+
+    private int checkGradePerc(int persGrade, int classGrade) {
+        int gradePerc;
+        return gradePerc;
     }
 
     @Override
