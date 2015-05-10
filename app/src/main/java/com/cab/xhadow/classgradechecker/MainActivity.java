@@ -113,7 +113,7 @@ public class MainActivity extends ActionBarActivity {
         }
         finalPerc = 100 - totalPerc;
         gradeNeed = 90 - finalGrade;
-        grade = gradeNeed/finalPerc;
+        grade = (gradeNeed/finalPerc) * 100;
         return grade;
     }
 
@@ -127,7 +127,7 @@ public class MainActivity extends ActionBarActivity {
         }
         finalPerc = 100 - totalPerc;
         gradeNeed = 80 - finalGrade;
-        grade = gradeNeed/finalPerc;
+        grade = (gradeNeed/finalPerc) * 100;
         return grade;
     }
 
@@ -141,7 +141,7 @@ public class MainActivity extends ActionBarActivity {
         }
         finalPerc = 100 - totalPerc;
         gradeNeed = 70 - finalGrade;
-        grade = gradeNeed/finalPerc;
+        grade = (gradeNeed/finalPerc) * 100;
         return grade;
     }
 
