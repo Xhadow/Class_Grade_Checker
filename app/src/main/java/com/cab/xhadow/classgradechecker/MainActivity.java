@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
-    //String for if any error occurs.
-    private static String errormsg;
     //floats to determine Final Grades
     private static float Final_Calc_A;
     private static float Final_Calc_B;
@@ -64,8 +62,16 @@ public class MainActivity extends ActionBarActivity {
             for(int i = 0; i < perc.length; i++) {
                 perc_int[i] = Integer.parseInt(perc[i].getText().toString());
             }
-
-            calcGrade(perc_int, Cperc_int);
+            float gradesCalc = calcGrade(perc_int, Cperc_int);
+            Final_Calc_A = checkGradeForA(gradesCalc, Cperc_int);
+            Final_Calc_B = checkGradeForB(gradesCalc, Cperc_int);
+            Final_Calc_C = checkGradeForC(gradesCalc, Cperc_int);
+            TextView gradeA = (TextView) findViewById(R.id.textView14);
+            gradeA.setText(Final_Calc_A + "%");
+            TextView gradeB = (TextView) findViewById(R.id.textView15);
+            gradeB.setText(Final_Calc_B + "%");
+            TextView gradeC = (TextView) findViewById(R.id.textView16);
+            gradeC.setText(Final_Calc_C + "%");
         }
     }
 
@@ -84,14 +90,59 @@ public class MainActivity extends ActionBarActivity {
         return perc_ret;
     }
 
-    private int calcGrade(int[] percPer, int[] percClass) {
-        int calcGraded;
-        return calcGraded;
+    private float calcGrade(int[] percPer, int[] percClass) {
+        float calcGrade = 0;
+        float[] grades = {0, 0, 0, 0, 0, 0, 0};
+
+        for(int i = 0; i < percPer.length; i++) {
+             grades[i] = ((percPer[i]/100) * percClass[i]);
+        }
+        for(int i = 0; i < grades.length; i++) {
+            calcGrade += grades[i];
+        }
+        return calcGrade;
     }
 
-    private int checkGradePerc(int persGrade, int classGrade) {
-        int gradePerc;
-        return gradePerc;
+    private float checkGradeForA(float finalGrade, int[] classPerc) {
+        float grade = 0;
+        float gradeNeed = 0;
+        int totalPerc = 0;
+        int finalPerc = 0;
+        for(int i = 0; i < classPerc.length; i++) {
+            totalPerc += classPerc[i];
+        }
+        finalPerc = 100 - totalPerc;
+        gradeNeed = 90 - finalGrade;
+        grade = gradeNeed/finalPerc;
+        return grade;
+    }
+
+    private float checkGradeForB(float finalGrade, int[] classPerc) {
+        float grade = 0;
+        float gradeNeed = 0;
+        int totalPerc = 0;
+        int finalPerc = 0;
+        for(int i = 0; i < classPerc.length; i++) {
+            totalPerc += classPerc[i];
+        }
+        finalPerc = 100 - totalPerc;
+        gradeNeed = 80 - finalGrade;
+        grade = gradeNeed/finalPerc;
+        return grade;
+    }
+
+    private float checkGradeForC(float finalGrade, int[] classPerc) {
+        float grade = 0;
+        float gradeNeed = 0;
+        int totalPerc = 0;
+        int finalPerc = 0;
+        for(int i = 0; i < classPerc.length; i++) {
+            totalPerc += classPerc[i];
+        }
+        finalPerc = 100 - totalPerc;
+        gradeNeed = 70 - finalGrade;
+        grade = gradeNeed/finalPerc;
+        return grade;
     }
 
     @Override
