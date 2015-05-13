@@ -284,18 +284,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Grade Needed for an A:"
-        android:id="@+id/textView10"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="0dp" />
+        android:text="Current Class Grade: "
+        android:id="@+id/textView17"
+        android:layout_below="@+id/button"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Grade Needed for a B: "
+        android:text=""
+        android:id="@+id/textView18"
+        android:layout_alignTop="@+id/textView17"
+        android:layout_toRightOf="@+id/textView17"
+        android:layout_toEndOf="@+id/textView17" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Grade on Final for A: "
+        android:id="@+id/textView10"
+        android:layout_below="@+id/textView17"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Grade on Final for B: "
         android:id="@+id/textView11"
         android:layout_below="@+id/textView10"
         android:layout_alignParentLeft="true"
@@ -305,7 +322,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Grade Needed for a C: "
+        android:text="Grade on Final for C: "
         android:id="@+id/textView12"
         android:layout_below="@+id/textView11"
         android:layout_alignParentLeft="true"

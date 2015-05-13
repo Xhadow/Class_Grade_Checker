@@ -2,6 +2,7 @@ package com.cab.xhadow.classgradechecker;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,8 +31,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void clickButton(View v) {
-        int[] Cperc_int = new int[7];
-        int[] perc_int = new int[7];
+        float[] Cperc_int = new float[7];
+        float[] perc_int = new float[7];
         EditText[] Cperc = new EditText[7];
         EditText[] perc = new EditText[7];
         //Get the inputs for the class percentages
@@ -75,7 +76,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    private boolean checkPercent(int[] perc) {
+    private boolean checkPercent(float[] perc) {
         boolean perc_ret;
         int perc_check = 0;
         for(int i = 0; i < perc.length; i++)
@@ -90,34 +91,42 @@ public class MainActivity extends ActionBarActivity {
         return perc_ret;
     }
 
-    private float calcGrade(int[] percPer, int[] percClass) {
+    private float calcGrade(float[] percPer, float[] percClass) {
         float calcGrade = 0;
+        float curGrade = 0;
+        float totalPerc = 0;
         float[] grades = {0, 0, 0, 0, 0, 0, 0};
 
         for(int i = 0; i < percPer.length; i++) {
-             grades[i] = ((percPer[i]/100) * percClass[i]);
+            grades[i] = ((percPer[i]) * (percClass[i]/100));
+            totalPerc += percClass[i];
         }
         for(int i = 0; i < grades.length; i++) {
             calcGrade += grades[i];
         }
+        curGrade = calcGrade/(totalPerc/100);
+        TextView gradeA = (TextView) findViewById(R.id.textView18);
+        gradeA.setText(curGrade + "%");
         return calcGrade;
     }
 
-    private float checkGradeForA(float finalGrade, int[] classPerc) {
+    private float checkGradeForA(float finalGrade, float[] classPerc) {
         float grade = 0;
         float gradeNeed = 0;
         int totalPerc = 0;
         int finalPerc = 0;
         for(int i = 0; i < classPerc.length; i++) {
             totalPerc += classPerc[i];
+            Log.i("", "totalPerc: " + totalPerc);
+            Log.i("", "classPerc: " + classPerc[i]);
         }
         finalPerc = 100 - totalPerc;
         gradeNeed = 90 - finalGrade;
-        grade = (gradeNeed/finalPerc) * 100;
+        grade = (gradeNeed * (finalPerc/100));
         return grade;
     }
 
-    private float checkGradeForB(float finalGrade, int[] classPerc) {
+    private float checkGradeForB(float finalGrade, float[] classPerc) {
         float grade = 0;
         float gradeNeed = 0;
         int totalPerc = 0;
@@ -127,11 +136,11 @@ public class MainActivity extends ActionBarActivity {
         }
         finalPerc = 100 - totalPerc;
         gradeNeed = 80 - finalGrade;
-        grade = (gradeNeed/finalPerc) * 100;
+        grade = (gradeNeed * (finalPerc/100));
         return grade;
     }
 
-    private float checkGradeForC(float finalGrade, int[] classPerc) {
+    private float checkGradeForC(float finalGrade, float[] classPerc) {
         float grade = 0;
         float gradeNeed = 0;
         int totalPerc = 0;
@@ -141,7 +150,7 @@ public class MainActivity extends ActionBarActivity {
         }
         finalPerc = 100 - totalPerc;
         gradeNeed = 70 - finalGrade;
-        grade = (gradeNeed/finalPerc) * 100;
+        grade = (gradeNeed * (finalPerc/100));
         return grade;
     }
 
