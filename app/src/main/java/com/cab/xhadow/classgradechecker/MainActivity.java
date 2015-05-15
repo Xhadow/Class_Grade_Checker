@@ -31,10 +31,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void clickButton(View v) {
-        float[] Cperc_int = new float[7];
-        float[] perc_int = new float[7];
-        EditText[] Cperc = new EditText[7];
-        EditText[] perc = new EditText[7];
+        float[] Cperc_int = new float[15];
+        float[] perc_int = new float[15];
+        EditText[] Cperc = new EditText[15];
+        EditText[] perc = new EditText[15];
         //Get the inputs for the class percentages
         Cperc[0] = (EditText) findViewById(R.id.editText2);
         Cperc[1] = (EditText) findViewById(R.id.editText4);
@@ -43,12 +43,20 @@ public class MainActivity extends ActionBarActivity {
         Cperc[4] = (EditText) findViewById(R.id.editText10);
         Cperc[5] = (EditText) findViewById(R.id.editText12);
         Cperc[6] = (EditText) findViewById(R.id.editText14);
+        Cperc[7] = (EditText) findViewById(R.id.editText16);
+        Cperc[8] = (EditText) findViewById(R.id.editText18);
+        Cperc[9] = (EditText) findViewById(R.id.editText20);
+        Cperc[10] = (EditText) findViewById(R.id.editText22);
+        Cperc[11] = (EditText) findViewById(R.id.editText24);
+        Cperc[12] = (EditText) findViewById(R.id.editText26);
+        Cperc[13] = (EditText) findViewById(R.id.editText28);
+        Cperc[14] = (EditText) findViewById(R.id.editText30);
         for(int i = 0; i < Cperc.length; i++) {
             Cperc_int[i] = Integer.parseInt(Cperc[i].getText().toString());
         }
         if(!(checkPercent(Cperc_int))) {
             TextView errt = (TextView) findViewById(R.id.textView13);
-            errt.setText("Error: Percentage in class is over 100");
+            errt.setText("Error: Class Percentage over 100 W/O final");
         } else {
             //Get the inputs for their percentages
             TextView errt = (TextView) findViewById(R.id.textView13);
@@ -60,6 +68,14 @@ public class MainActivity extends ActionBarActivity {
             perc[4] = (EditText) findViewById(R.id.editText9);
             perc[5] = (EditText) findViewById(R.id.editText11);
             perc[6] = (EditText) findViewById(R.id.editText13);
+            perc[7] = (EditText) findViewById(R.id.editText15);
+            perc[8] = (EditText) findViewById(R.id.editText17);
+            perc[9] = (EditText) findViewById(R.id.editText19);
+            perc[10] = (EditText) findViewById(R.id.editText21);
+            perc[11] = (EditText) findViewById(R.id.editText23);
+            perc[12] = (EditText) findViewById(R.id.editText25);
+            perc[13] = (EditText) findViewById(R.id.editText27);
+            perc[14] = (EditText) findViewById(R.id.editText29);
             for(int i = 0; i < perc.length; i++) {
                 perc_int[i] = Integer.parseInt(perc[i].getText().toString());
             }
@@ -95,7 +111,7 @@ public class MainActivity extends ActionBarActivity {
         float calcGrade = 0;
         float curGrade = 0;
         float totalPerc = 0;
-        float[] grades = {0, 0, 0, 0, 0, 0, 0};
+        float[] grades = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
         for(int i = 0; i < percPer.length; i++) {
             grades[i] = ((percPer[i]) * (percClass[i]/100));

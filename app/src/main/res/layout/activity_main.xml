@@ -1,17 +1,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:layout_height="match_parent" android:paddingLeft="5dp"
+    android:background="@drawable/backview"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="225dp"
+        android:layout_height="200dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:id="@+id/scrollView"
+        android:background="@drawable/listshape"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -29,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Your\nPercentage"
+                    android:text="Percentage of\nAssignment"
                     android:id="@+id/textView"
                     android:gravity="center" />
 
@@ -37,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Percentage\nin Class"
+                    android:text="Percentage\n Worth in Class"
                     android:layout_column="4"
                     android:id="@+id/textView2"
                     android:gravity="center" />
@@ -267,6 +270,254 @@
                     android:gravity="center"
                     android:text="0"/>
             </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText15"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView19"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText16"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText17"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView20"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText18"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText19"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView21"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText20"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText21"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView22"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText22"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText23"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView23"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText24"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText25"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView24"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText26"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText27"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView25"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText28"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:id="@+id/editText29"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" Out of "
+                    android:layout_column="2"
+                    android:id="@+id/textView26"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:layout_column="4"
+                    android:id="@+id/editText30"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="0"/>
+            </TableRow>
         </TableLayout>
     </ScrollView>
 
@@ -278,7 +529,12 @@
         android:id="@+id/button"
         android:layout_below="@+id/scrollView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="6"
+        android:shadowDy="-2"
+        android:shadowRadius="7"/>
 
     <TextView
         android:layout_width="wrap_content"
